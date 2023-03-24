@@ -2,14 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import Home from './Home';
-import User from './Users';
+import Home from './Pages/Home';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <User></User>
+    <Home></Home>
   </React.StrictMode>
 );
 
