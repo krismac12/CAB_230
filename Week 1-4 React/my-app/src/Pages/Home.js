@@ -11,16 +11,15 @@ export default function User(){
     const[city,setCity] = useState([]);
 
 
-    
+    {useEffect(()=>{
+            
+        fetchForecast(city).then(res => setForecast(res));
+        
+    },[city])}
 
 
     return(
         <div className="main">
-            {useEffect(()=>{
-            
-                fetchForecast(city).then(res => setForecast(res));
-                
-            },[city])}
             <h2>City</h2>
             <input type= "Text" onChange={(e) => setCity(e.target.value)}></input>
            { forecast ? <div className="Current">
