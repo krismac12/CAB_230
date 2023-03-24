@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {fetchForecast,fetchUser} from "../API/api"
+import {fetchForecast,fetchUser} from "../API-Calls/api"
 
 
 
