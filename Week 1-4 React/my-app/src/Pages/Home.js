@@ -5,23 +5,9 @@ import {fetchForecast,fetchUser} from "../API-Calls/api"
 
 
 export default function User(){
-    const janet = {
-        "id": 2,
-        "email": "janet.weaver@reqres.in",
-        "first_name": "Janet",
-        "last_name": "Weaver",
-        "avatar": "https://reqres.in/img/faces/2-image.jpg"
-    };
+
     const [user,setUser] = useState([]);
     const [forecast,setForecast] = useState();
-
-
-    const UserInput = props =>{
-
-        useEffect(() =>
-            setCity()
-        )
-    }
     const[city,setCity] = useState([]);
 
 
@@ -32,7 +18,7 @@ export default function User(){
         <div className="main">
             {useEffect(()=>{
             
-                fetchForecast(city).then(forecast => setForecast(forecast));
+                fetchForecast(city).then(res => setForecast(res));
                 
             },[city])}
             <h2>City</h2>
@@ -58,7 +44,6 @@ export default function User(){
                     </ul>
                 ))}
             </div> : <p></p>}
-            {console.log(forecast)}            
         </div>
     )
 }
